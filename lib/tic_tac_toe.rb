@@ -112,7 +112,9 @@ def over?(board)
 end
   
 def winner(board)
-  if won?(board).all? {|value| board[value] == "X"}
+  if !won?(board)
+    nil
+  elsif won?(board).all? {|value| board[value] == "X"}
     "X"
   elsif won?(board).all? {|value| board[value] == "O"}
     "O"
