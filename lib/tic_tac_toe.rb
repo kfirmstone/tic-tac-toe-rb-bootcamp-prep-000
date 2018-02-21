@@ -117,7 +117,7 @@ def winner(board)
   elsif won?(board).all? {|value| board[value] == "O"}
     "O"
   elsif !won(board)
-    nil
+   nil 
   end
 end
 
